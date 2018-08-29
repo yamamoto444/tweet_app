@@ -1,0 +1,17 @@
+<div class="login_form">
+    <div class="errors">
+        <% if @error_message %>
+            <%= @error_message %>
+        <% end %>
+    </div>
+    <div class="inner">
+        <%= form_tag("/account/login", {method: :post}) do %> 
+            <p><input name="email" type="email" value="<%= @email %>"></p>
+            <p><input name="password" type="password" value="<%= @password %>"></p>
+            <div class="btns">
+                <p><%= link_to("Back","/",class:"back_btn") %></p>
+                <p><input class="login_btn" type="submit" value="Login"></p>
+            </div>
+        <% end %>
+    </div>
+</div>

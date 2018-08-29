@@ -1,0 +1,11 @@
+<div class="posts_edit">
+    <%= form_tag("/posts/#{@post.id}/update") do %>
+        <div class="errors">    
+            <% @post.errors.full_messages.each do |message| %>
+                <%= message %> 
+            <% end %>
+        </div>
+        <textarea name="content"><%= @post.content %></textarea>
+        <input class="save_btn" type="submit" value="save">
+    <% end %>
+</div>

@@ -1,0 +1,19 @@
+current directory: /Users/okasir/tweet_app/vendor/bundle/gems/byebug-10.0.2/ext/byebug
+/Users/okasir/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180807-24968-9f0j80.rb extconf.rb
+creating Makefile
+
+current directory: /Users/okasir/tweet_app/vendor/bundle/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/okasir/tweet_app/vendor/bundle/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/okasir/tweet_app/vendor/bundle/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20180807-24968-x21f59/byebug

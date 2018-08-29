@@ -1,0 +1,29 @@
+<div class="account_show">
+    <p><img src="<%= "/user_images/#{@user.image_name}" %>" width="80" height="80"></p>
+    <br>
+    <p class="profile_column">name</p>
+    <p><%= @user.name %></p>
+    <p class="profile_column">Email</p>
+    <p><%= @user.email %></p>
+    <% if @user.id == @current_user.id %>
+        <div class="btns">
+            <p><%= link_to("Back","/posts/index",class:"back_btn") %></p>
+            <p><%= link_to("Edit","/account/#{@current_user.id}/edit",class:"edit_btn") %></p>
+            <p><%= link_to("Delete Account","/account/delete_confirm",class:"delete_btn") %></p>
+        </div>
+    <% end %>
+    <div class="switch">
+        <p><%= link_to("Posts","/account/#{@user.id}/show") %></p>
+        <p>|</p>
+        <p>Likes</p>
+    </div>
+    <% @likes.each do |like| %>
+        <% post = Post.find_by(id:like.post_id) %>
+        <div class="user_info">
+            <p><img src="<%= "/user_images/#{post.user.image_name}" %>" width="20" height="20"></p>
+            <p><%= link_to(post.user.name,"/account/#{post.user.id}/show",class:"name") %></p>
+        </div>
+        <%= link_to(post.content,"/posts/#{post.id}",class:"index_post") %>
+        <hr class="posts_line">
+    <% end %>
+</div>

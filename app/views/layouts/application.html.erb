@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TweetApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <% if session[:user_id] %>
+      <header>
+        <div class="inner">
+          <h1><%= link_to "/posts/index" do %>
+            <%= image_tag "logo.png",:width => "100" %>
+          <% end %>
+          </h1>
+          <ul>  
+            <li><%= link_to("Index","/posts/index") %></li>
+            <li><%= link_to("Logout","/account/logout",{method: :post}) %></li>
+            <li class="id">
+              <img src="<%= "/user_images/#{@current_user.image_name}" %>" width="30" height="30">
+              <%= link_to(@current_user.name,"/account/#{@current_user.id}/show",class:"user_name") %>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+      <% if flash[:notice] %>
+        <div class="flash">
+          <div class="inner">
+            <%= flash[:notice] %>
+          </div>
+        </div>
+      <% end %>
+    </header>
+    <br class="header_bottom">
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>©2018 Toss</p>
+    </footer>
+  </body>
+</html>

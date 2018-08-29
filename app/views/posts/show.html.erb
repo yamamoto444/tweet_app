@@ -1,0 +1,32 @@
+<div class="posts_show">
+    <div class="user_info">
+        <img src="<%= "/user_images/#{@post.user.image_name}" %>" width="20" height="20">
+        <p><%= link_to(@post.user.name,"/account/#{@post.user.id}/show",class:"name") %></p>
+    </div>
+    <p><%= simple_format(@post.content) %></p>
+    <p class="date_time"><%= @post.created_at %></p>
+    <% if Like.find_by(user_id:@current_user.id,post_id:@post.id) %>
+        <div class="like_btns">
+            <%= link_to("/likes/#{@post.id}/destroy",{method: :post}) do %>
+                <p><%= @like_count %><p>
+                <span class="fa fa-heart unlike_btn"></span>
+                <p>unLike</p>
+            <% end %>
+        </div>
+    <% else %>
+        <div class="like_btns">
+            <%= link_to("/likes/#{@post.id}/create",{method: :post}) do %>
+                <p><%= @like_count %><p>
+                <span class="fa fa-heart like_btn"></span>
+                <p>like</p>
+            <% end %>
+        </div>
+    <% end %>
+    <div class="btns">
+        <p><%= link_to("Back","/posts/index",class:"back_btn") %></p>
+        <% if @post.user_id == @current_user.id %>
+            <p><%= link_to("Edit","/posts/#{@post.id}/edit",class:"edit_btn") %></p>
+            <p><%= link_to("Delete","/posts/#{@post.id}/destroy",{method: :post,class:"delete_btn"}) %></p>
+        <% end %>
+    </div>
+</div>

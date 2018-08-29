@@ -1,0 +1,112 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    list-style: none;
+}
+img{
+    vertical-align: bottom;
+    border:none;
+}
+body{
+    background-color:#efefef;
+}
+main{
+    color:#696969;
+    display:block;
+    width:840px;
+    margin:0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header{
+    width:100%;
+    height:60px;
+    position:fixed;
+    top:0px;
+    left:0px;
+    padding-top:20px;
+    background-color:#54917fc6;
+}
+.header_bottom{
+    content:"";
+    display:block;
+    padding-top:90px;
+}
+header .inner{
+    margin:0 auto;
+    width:840px;
+}
+header h1{
+    margin-top:-12px;
+    float:left;
+}
+header li{
+    float:left;
+    margin:30px 0 0 50px;
+}
+header .id{
+    float:right;
+    margin-top:15px;
+    font-size:12px;
+}
+header .id img{
+    border-radius:5px;
+}
+header .user_name{
+    margin:5px;
+}
+header a{
+    color:#f5f5f5;
+}
+header li a:hover{
+    color:#ff6347;
+}
+.clear_both{
+    content:"";
+    clear: both;
+    display:block;
+}
+.flash
+{
+   background-color:#efefef;
+   padding-top:5px;
+   clear:both;
+}
+.flash .inner{
+    font-weight: bold;
+    color:#ea5532;
+    background-color:#d4d9d6;
+    text-align: center;
+    width:50%;
+    padding:5px 0;
+
+}
+.errors{
+    color:#ea5550;
+}
+footer{
+    width:840px;
+    margin:0 auto;
+}
+footer p{
+    margin-top:5px;
+    font-size:10px;
+    color:gray;
+    float:right;
+
+}

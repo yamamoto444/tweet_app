@@ -1,0 +1,8 @@
+<div class="account_delete">
+    <p>Are you sure delete<br>
+    <%= "#{@user.name}'s account?" %></p>
+        <div class="btns">
+            <p><%= link_to("Back","/account/#{@current_user.id}/show",class:"back_btn") %></p>
+            <p><%= link_to("Delete","/account/destroy",{method: :post,class:"delete_btn"}) %></p>
+        </div>
+</div>
