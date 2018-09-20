@@ -12,6 +12,20 @@
     text-align: center;
     position:relative;
 }
+.home_top::before{
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right: 0;
+    content:'';
+}
+.box{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
 .home_top h1 a{
     color:white;
 }

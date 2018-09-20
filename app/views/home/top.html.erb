@@ -1,13 +1,17 @@
 <div class="home_top">
-    <div class="outline">
-        <h1><%= link_to "/" do %>
-            <%= image_tag "logo.png",:width =>"220" %>
-        <% end %>
-        </h1>
+<div class="bg">
+    <div class="box">
+        <div class="outline">
+            <h1><%= link_to "/" do %>
+                <%= image_tag "logo.png",:width =>"220" %>
+            <% end %>
+             </h1>
+        </div>
+        <hr>
+        <ul>
+            <li><%= link_to("Create Account","/account/new") %></li>
+            <li><%= link_to("Login","/account/login_form") %></li>
+        </ul>
     </div>
-    <hr>
-    <ul>
-        <li><%= link_to("Create Account","/account/new") %></li>
-        <li><%= link_to("Login","/account/login_form") %></li>
-    </ul>
+</div>
 </div>
