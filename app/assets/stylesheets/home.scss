@@ -5,27 +5,14 @@
     width:840px;
     height:550px;
     margin-top:-80px;
-    background-image:image-url("top.jpg");
+    background-color:#e5c397;
+    background-image:image-url("fukidashi.png");
     background-size:cover;
     background-position:0px -50px;
     background-repeat:no-repeat;
     text-align: center;
     position:relative;
 }
-.home_top::before{
-    background-color: rgba(0,0,0,0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom:0;
-    right: 0;
-    content:'';
-}
-.box{
-    position: absolute;
-    width: 100%;
-    text-align: center;
-  }
 .home_top h1 a{
     color:white;
 }
@@ -48,10 +35,9 @@
 }
 .home_top li a{
     font-size:18px;
-    color:white;
+    color:black;
     font-weight:bold;
     letter-spacing:2px;
-    text-shadow: -2px 4px 0 rgba(0,0,0,0.3);
 }
 .home_top li a:hover{
     opacity:0.6;
@@ -59,6 +45,5 @@
 .home_top hr{
     width:600px;
     margin:20px auto;
-    color:white;
 
 }
