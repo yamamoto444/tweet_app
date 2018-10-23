@@ -1,29 +1,45 @@
+<br class="header_bottom">
 <div class="posts_show">
     <div class="user_info">
         <img src="<%= "/user_images/#{@post.user.image_name}" %>" width="20" height="20">
         <p><%= link_to(@post.user.name,"/account/#{@post.user.id}/show",class:"name") %></p>
     </div>
     <p><%= simple_format(@post.content) %></p>
-    <p class="date_time"><%= @post.created_at %></p>
-    <% if Like.find_by(user_id:@current_user.id,post_id:@post.id) %>
-        <div class="like_btns">
-            <%= link_to("/likes/#{@post.id}/destroy",{method: :post}) do %>
-                <p><%= @like_count %><p>
-                <span class="fa fa-heart unlike_btn"></span>
-                <p>unLike</p>
+    <div class="user_info">
+        <% if @post.origin_image_name != nil %>
+            <div class="action_title">
+                <span class="fas fa-retweet retweet_btn"></span>
+                <p><%=  @post.user.name %>Retweeted</p>
+            </div>
+            <p><img src="<%= "/user_images/#{@post.origin_image_name}" %>" width="20" height="20"></p>
             <% end %>
+            <p><%= @post.origin_name %></p>
         </div>
-    <% else %>
-        <div class="like_btns">
-            <%= link_to("/likes/#{@post.id}/create",{method: :post}) do %>
-                <p><%= @like_count %><p>
-                <span class="fa fa-heart like_btn"></span>
-                <p>like</p>
+        <p class="origin_text"><%= @post.origin_content %></p>
+        <p class="date_time"><%= @post.created_at %></p>
+    <div class="action_btns">
+        <% if @post.user_id == @current_user.id %>
+            <span class="fa fa-heart like_btn"></span>
+            <p><%= @like_count %><p>
+            <span class="fas fa-retweet retweet_btn"></span>
+            <%= Post.where(origin_content:@post.content).count %>
+        <% else %>
+            <% if Like.find_by(user_id:@current_user.id,post_id:@post.id) %>
+                <%= link_to("/likes/#{@post.id}/destroy",{method: :post}) do %>
+                    <span class="fa fa-heart unlike_btn"></span>
+                <% end %>
+            <% else %>
+                <%= link_to("/likes/#{@post.id}/create",{method: :post}) do %>
+                    <span class="fa fa-heart like_btn"></span>
+                <% end %>
             <% end %>
-        </div>
-    <% end %>
+            <p><%= @like_count %><p>
+            <%= link_to("/posts/#{@post.id}/retweet_form") do %>
+                <span class="fas fa-retweet retweet_btn"></span>
+            <% end %>
+        <% end %>
+    </div>
     <div class="btns">
-        <p><%= link_to("Back","/posts/index",class:"back_btn") %></p>
         <% if @post.user_id == @current_user.id %>
             <p><%= link_to("Edit","/posts/#{@post.id}/edit",class:"edit_btn") %></p>
             <p><%= link_to("Delete","/posts/#{@post.id}/destroy",{method: :post,class:"delete_btn"}) %></p>

@@ -6,11 +6,11 @@
     </div>
     <div class="inner">
         <%= form_tag("/account/create",{method: :post}) do %>
-            <p>name</p>
+            <p class="profile_column">name</p>
             <p><input name="name" value= "<%= @user.name %>"></p>
-            <p>Email</p>
+            <p class="profile_column">Email</p>
             <p><input name="email" value= "<%= @user.email %>"></p>
-            <p>password</p>
+            <p class="profile_column">password</p>
             <p><input name="password" type="password" value="<%= @user.password %>"></p>
             <div class="btns">
                 <p><%= link_to("Back","/",class:"back_btn") %></p>

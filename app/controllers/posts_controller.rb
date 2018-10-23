@@ -49,4 +49,24 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
 
+  def retweet_form
+    @post = Post.find_by(id: params[:id])
+    @user = @post.user
+  end
+
+  def retweet_create
+    @posts = Post.all.order(created_at: :desc)
+    @post = Post.new(content: params[:content],
+                    user_id:session[:user_id],
+                    origin_name:params[:name],
+                    origin_image_name:params[:image_name],
+                    origin_content:params[:origin_content])
+    if @post.save
+      flash[:notice]="Posted"
+      redirect_to("/posts/index")
+    else
+      render("posts/index")
+    end
+  end
+
 end
