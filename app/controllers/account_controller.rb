@@ -47,12 +47,7 @@ def edit
   @user = User.find_by(id:session[:user_id])
   @user.name = params[:name]
   @user.email = params[:email]
-
-  if params[:image]
-    @user.image_name = "#{@user.id}.jpg"
-    image = params[:image]
-    File.binwrite("public/user_images/#{@user.image_name}",image.read)
-  end
+  @user.image_name = params[:image] 
   
   if @user.save
   redirect_to("/account/#{@user.id}/show")
