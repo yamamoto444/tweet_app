@@ -115,16 +115,34 @@ footer p{
 
 /*　画面サイズ 420px */
 @media screen and (max-width:420px) {
+input[type="submit"]{
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+
     .home_top{
         width:100%;
-        height:780px;
+        height:550px;
     }
     .home_top .wrap{
         width:100%;
-        height:780px;
+        height:550px;
     }
     .home_top .outline{
-        margin-top:50%;
+        margin-top:35%;
         height:0px;
         display:inline-block;
     }
@@ -181,7 +199,7 @@ footer p{
         margin:0;
     }
     header li{
-        margin:35px 0 0 50px;
+        margin:35px 0 0 30px;
     }
     main{
         width:100%;
@@ -198,17 +216,27 @@ footer p{
         padding:10px 0;
         text-align:center;
     }
+    .delete_btn{
+        margin-right:0;
+    }
     .account_edit .input_image{
         width:130px;
         margin-top:10px;
         height:30px;
         background-color:#ccccbb;
     }
+    .account_show,.like_show{
+        width:90%;
+        padding:20px;
+    }
     .action_btns {
         font-size:16px;
     }
     .posts_index{
         width:100%;
+    }
+    .posts_index textarea{
+        width:75%;
     }
     .posts_show{
         width:100%;
