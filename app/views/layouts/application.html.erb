@@ -21,7 +21,7 @@
           </h1>
           <ul>
             <li><%= link_to("Top","/posts/index") %></li>
-            <li><%= link_to("Log out","/account/logout",{method: :post}) %></li>
+            <li><%= link_to("Logout","/account/logout",{method: :post}) %></li>
             <li class="id">
               <img src="<%= "/user_images/#{@current_user.image_name}" %>" width="50" height="50">
               <%= link_to(@current_user.name,"/account/#{@current_user.id}/show",class:"user_name") %>
