@@ -8,6 +8,20 @@ gem 'rails', '~> 5.2.0'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'heroku'
+
+group :production do
+  gem 'pg'
+  gem 'thin'
+end
+
+group :assets do
+gem 'sass-rails',   '~> 3.2.3'
+gem 'coffee-rails', '~> 3.2.1'
+gem 'uglifier', '>= 1.0.3'
+end
+
+gem 'jquery-rails'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: [:development, :test]
 gem 'pg', group: :production
