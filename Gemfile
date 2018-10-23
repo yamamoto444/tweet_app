@@ -7,7 +7,6 @@ ruby '2.5.0'
 gem 'rails', '~> 5.2.0'
 gem 'carrierwave'
 gem 'cloudinary'
-gem 'heroku'
 
 group :production do
   gem 'pg'
