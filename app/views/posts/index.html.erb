@@ -1,6 +1,10 @@
 <br class="header_bottom">
 <div class="posts_index">
     <%= form_tag("/posts/create",{method: :post}) do %>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
         <div class="errors">
             <% @post.errors.full_messages.each do |message| %>
                 <%= message %>
@@ -8,6 +12,20 @@
         </div>
         <p><textarea name="content" placeholder="Add a commnet..."><%= @post.content %></textarea></p>
         <p><input class="submit_btn" type="submit" value="tweet"></p>
+<<<<<<< HEAD
+=======
+=======
+        <form>
+            <div class="errors">
+                <% @post.errors.full_messages.each do |message| %>
+                    <%= message %>
+                <% end %>
+            </div>
+            <p><textarea name="content" placeholder="Add a commnet..."><%= @post.content %></textarea></p>
+            <p><input class="submit_btn" type="submit" value="tweet"></p>
+        </form>
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
         <br class="clear_both">
     <% end %>
     <div class="posts">

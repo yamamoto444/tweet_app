@@ -23,13 +23,13 @@ class AccountController < ApplicationController
   def login
       @user = User.find_by(email: params[:email],password: params[:password])
       if @user
-      session[:user_id] = @user.id
-      redirect_to("/posts/index")
-    else
-      @error_message = "Please check E-mail or password"
-      @email = params[:email]
-      @password = params[:password]
-      render("account/login_form")
+        session[:user_id] = @user.id
+        redirect_to("/posts/index")
+      else
+        @error_message = "Please check E-mail or password"
+        @email = params[:email]
+        @password = params[:password]
+        render("account/login_form")
   end
 end
 def logout
@@ -47,16 +47,11 @@ def edit
   @user = User.find_by(id:session[:user_id])
   @user.name = params[:name]
   @user.email = params[:email]
-
-  if params[:image]
-    @user.image_name = "#{@user.id}.jpg"
-    image = params[:image]
-    File.binwrite("public/user_images/#{@user.image_name}",image.read)
-  end
+  @user.image_name = params[:image] 
   
   if @user.save
-  redirect_to("/account/#{@user.id}/show")
-  flash[:notice] = "Edited"
+    redirect_to("/account/#{@user.id}/show")
+    flash[:notice] = "Edited"
   else
     render("acount/#{@user.id/edit}")
   end

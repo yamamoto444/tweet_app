@@ -36,6 +36,7 @@
         <p class="origin_text"><%= post.origin_content %></p>
         <p class="date_time"><%= post.created_at %></p>
         <div class="action_btns">
+<<<<<<< HEAD
             <% @post = Post.find_by(id: post.id) %>
                 <% if @post.user_id == @current_user.id %>
                     <span class="fa fa-heart like_btn"></span>
@@ -57,6 +58,40 @@
                 <% end %>
             <% end %>
         </div>
+=======
+<<<<<<< HEAD
+            <% @post = Post.find_by(id: post.id) %>
+            <% if @post.user_id == @current_user.id %>
+                <span class="fa fa-heart like_btn"></span>
+                <p><%= @like_count %><p>
+                <span class="fas fa-retweet retweet_btn"></span>
+                <%= Post.where(origin_content:@post.content).count %>
+            <% else %>
+=======
+        <% @post = Post.find_by(id: post.id) %>
+        <% if @post.user_id == @current_user.id %>
+            <span class="fa fa-heart like_btn"></span>
+            <p><%= @like_count %><p>
+            <span class="fas fa-retweet retweet_btn"></span>
+            <%= Post.where(origin_content:@post.content).count %>
+        <% else %>
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
+            <% if Like.find_by(user_id:@current_user.id,post_id:@post.id) %>
+                <%= link_to("/likes/#{@post.id}/destroy",{method: :post}) do %>
+                    <span class="fa fa-heart unlike_btn"></span>
+                <% end %>
+            <% else %>
+                <%= link_to("/likes/#{@post.id}/create",{method: :post}) do %>
+                    <span class="fa fa-heart like_btn"></span>
+                <% end %>
+            <% end %>
+            <p><%= @like_count %><p>
+            <%= link_to("/posts/#{@post.id}/retweet_form") do %>
+                <span class="fas fa-retweet retweet_btn"></span>
+            <% end %>
+        <% end %>
+    </div>
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
         <hr class="posts_line">
     <% end %>
 </div>

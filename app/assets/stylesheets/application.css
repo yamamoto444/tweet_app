@@ -115,16 +115,59 @@ footer p{
 
 /*　画面サイズ 420px */
 @media screen and (max-width:420px) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    .home_top,
+=======
+<<<<<<< HEAD
+=======
+input[type="submit"]{
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
     .home_top{
         width:100%;
         height:550px;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
     .home_top .wrap{
         width:100%;
         height:550px;
     }
     .home_top .outline{
+<<<<<<< HEAD
         margin-top:40%;
+=======
+<<<<<<< HEAD
+        margin-top:40%;
+=======
+<<<<<<< HEAD
+        margin-top:40%;
+=======
+        margin-top:35%;
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
         height:0px;
         display:inline-block;
     }
@@ -135,12 +178,25 @@ footer p{
         width:90%;
         margin-top:35px;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
     .account_new,
     .login_form{
         font-size:20px;
     }
     .register_btn,
     .login_btn{
+<<<<<<< HEAD
+=======
+=======
+    .account_new,.login_form{
+        font-size:20px;
+    }
+    .register_btn,.login_btn{
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
         width:130px;
         padding:10px 0;
         font-size:16px;
@@ -193,20 +249,62 @@ footer p{
         font-size:18px;
         margin:10px 0;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
     .edit_btn,
     .delete_btn{
         margin:10px 10px 5px 0;
         width:110px;
+<<<<<<< HEAD
+=======
+=======
+    .edit_btn,.delete_btn{
+<<<<<<< HEAD
+        margin:10px 10px 5px 0;
+        width:110px;
+=======
+        margin:10px 20px 5px 0;
+        width:130px;
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
         font-size:14px;
         padding:10px 0;
         text-align:center;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    .delete_btn{
+        margin-right:0;
+    }
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
     .account_edit .input_image{
         width:130px;
         margin-top:10px;
         height:30px;
         background-color:#ccccbb;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    .account_show,.like_show{
+        width:90%;
+        padding:20px;
+    }
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
     .action_btns {
         font-size:16px;
     }
@@ -218,10 +316,23 @@ footer p{
     }
     .posts_show{
         width:100%;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
         box-sizing: border-box;
     }
     .retweet_form,
     .posts_edit{
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        box-sizing: border-box;
+    }
+    .retweet_form,.posts_edit{
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
         margin:0 20px;
     }
     .posts_edit textarea{
@@ -231,9 +342,29 @@ footer p{
     .posts_edit .submit_btn{
         margin-left:0;
     }
+<<<<<<< HEAD
     .retweet_form textarea{
         width:98%;
         margin-left:0;
+=======
+<<<<<<< HEAD
+    .account_edit .edit_btn{
+        width:130px;
+    }
+    .retweet_form textarea{
+        width:98%;
+        margin-left:0;
+=======
+    .retweet_form textarea{
+        width:98%;
+        margin-left:0;
+=======
+    }
+    .retweet_form,.posts_edit{
+        margin-left:10px;
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
     }
     footer{
         width:100%;

@@ -2,19 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+<<<<<<< HEAD
 .account_show,
 .like_show{
+=======
+.account_show,.like_show{
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
     width:300px;
-    margin:30px auto;
+    margin:0px auto;
     padding:30px;
     background-color:#f5f5f5;
+<<<<<<< HEAD
     box-sizing: border-box;
 }
 .account_show img,
 .like_show img,{
+=======
+<<<<<<< HEAD
+    box-sizing:border-box;
+=======
+    box-sizing: border-box;
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
+}
+.account_show img,.like_show img,{
+>>>>>>> c7def91596875ce8c40d0ab9ca56605bac4dd9c8
     display:block;
     margin:0 auto;
-    border-radius: 15px;
+    border-radius:15px;
 }
 .profile_column{
     margin-top:5px;
