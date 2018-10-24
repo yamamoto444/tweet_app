@@ -1,4 +1,5 @@
 <br class="header_bottom">
+<<<<<<< HEAD
     <div class="posts_edit">
         <p class="edit_comment">Edit comment?</p>
         <%= form_tag("/posts/#{@post.id}/update") do %>
@@ -11,3 +12,17 @@
             <input class="submit_btn" type="submit" value="save">
         <% end %>
     </div>
+=======
+<div class="posts_edit">
+<p class="edit_comment">Edit comment?</p>
+    <%= form_tag("/posts/#{@post.id}/update") do %>
+        <div class="errors">    
+            <% @post.errors.full_messages.each do |message| %>
+                <%= message %> 
+            <% end %>
+        </div>
+        <textarea name="content"><%= @post.content %></textarea>
+        <input class="submit_btn" type="submit" value="save">
+    <% end %>
+</div>
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189

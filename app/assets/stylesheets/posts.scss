@@ -15,8 +15,12 @@
 .submit_btn:hover{
     opacity:0.6;
 }
+<<<<<<< HEAD
 .retweet_form .submit_btn,
 .posts_edit .submit_btn{
+=======
+.retweet_form .submit_btn,.posts_edit .submit_btn{
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
     border:none;
     color:#f5f5f5;
     background-color:#ff6347;
@@ -73,10 +77,21 @@ textarea{
 }
 .date_time{
     margin-top:20px;
+<<<<<<< HEAD
     text-align:right;
     font-size:12px;
 }
 .action_btns{
+=======
+    text-align: right;
+    font-size:12px;
+}
+.action_btns {
+<<<<<<< HEAD
+=======
+    margin-left:5px;
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
     overflow:hidden;
     font-size:12px;
 }
@@ -109,15 +124,23 @@ textarea{
     display:block;
     opacity:0.6;
 }
+<<<<<<< HEAD
 .action_title span,
 .action_title p{
+=======
+.action_title span,action_title p{
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
     float:left;
 }
 .action_title span{
     margin-top:8px;
 }
+<<<<<<< HEAD
 .retweet_this,
 .edit_comment{
+=======
+.retweet_this,.edit_comment{
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
     margin-bottom:10px;
     letter-spacing:1px;
 }

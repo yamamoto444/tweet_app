@@ -17,7 +17,12 @@
         <div class="inner">
           <h1><%= link_to "/posts/index" do %>
             <%= image_tag "logo.png",:width => "100" %>
+<<<<<<< HEAD
           <% end %></h1>
+=======
+          <% end %>
+          </h1>
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
           <ul>
             <li><%= link_to("Top","/posts/index") %></li>
             <li><%= link_to("Log out","/account/logout",{method: :post}) %></li>
@@ -33,9 +38,14 @@
         <div class="inner">
           <%= flash[:notice] %>
         </div>
+<<<<<<< HEAD
       </div>
     <% end %>
       </header>
+=======
+      <% end %>
+    </header>
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
     <main>
       <%= yield %>
     </main>

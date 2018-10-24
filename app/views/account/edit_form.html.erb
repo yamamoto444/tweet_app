@@ -6,6 +6,7 @@
         <% end %>
     </div>
     <div class="inner">
+<<<<<<< HEAD
         <%= form_tag("/account/#{@current_user.id}/edit",{multipart: true}) do %>
             <p class="profile_column">name</p>
             <p><input name = "name" value = "<%= @user.name %>"></p>
@@ -19,4 +20,20 @@
                 <p><input class="edit_btn" type="submit" value="Edit" %></p>
         <% end %>
     </div> 
+=======
+    <%= form_tag("/account/#{@current_user.id}/edit",{multipart: true}) do %>
+        <p class="profile_column">name</p>
+        <p><input name = "name" value = "<%= @user.name %>"></p>
+        <p class="profile_column">image</p> 
+        <p><input class= "input_image" name = "image" type="file"></p>
+        <p class="profile_column">Email</p>
+        <p><input name = "email" value = "<%= @user.email %>"></p>
+        <p><input name = "password" type = "password" value = "<%= @user.password %>"></p>
+        <div class="btns">
+            <p><%= link_to("back","/account/#{@user.id}/show",class:"back_btn") %></p>
+            <p><input class="edit_btn" type="submit" value="Edit" %></p>
+    <% end %>
+    </div> 
+    </div>
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
 </div>

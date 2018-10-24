@@ -2,6 +2,7 @@
 <div class="retweet_form">
     <p class="retweet_this">Retweet this?</p>
     <%= form_tag("/posts/retweet_create",{method: :post}) do %>
+<<<<<<< HEAD
         <div class="errors">
             <% @post.errors.full_messages.each do |message| %>
                 <%= message %>
@@ -17,6 +18,25 @@
         </div>
         <p class="origin_text"><%= simple_format(@post.content) %></p>
         <p><input class="submit_btn" type="submit" value="retweet"></p>
+=======
+        <form>
+            <div class="errors">
+                <% @post.errors.full_messages.each do |message| %>
+                    <%= message %>
+                <% end %>
+            </div>
+            <p><textarea name="content" placeholder="Add a comment..."></textarea></p>
+            <input type="hidden" name="image_name" value="<%= @post.user.image_name %>">
+            <input type="hidden" name="name" value="<%= @post.user.name %>">
+            <input type="hidden" name="origin_content" value="<%= @post.content %>">
+            <div class="user_info">
+                <img src="<%= "/user_images/#{@post.user.image_name}" %>" width="20" height="20">
+                <p><%= @post.user.name %></p>
+            </div>
+            <p class="origin_text"><%= simple_format(@post.content) %></p>
+            <p><input class="submit_btn" type="submit" value="retweet"></p>
+        </form>
+>>>>>>> be53ab069c40b08ae112ac0cec4dc2721fad6189
         <br class="clear_both">
     <% end %>
 </div>
