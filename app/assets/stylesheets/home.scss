@@ -4,12 +4,11 @@
 .home_top{
     width:840px;
     height:550px;
-    margin-top:-80px;
     background-color:#e5c397;
     background-image:image-url("top.jpg");
     background-size:cover;
-    text-align: center;
-    position:relative;
+    text-align:center;
+    margin:0 auto;
 }
 .home_top .wrap{
     width:840px;
@@ -26,9 +25,7 @@
     display:inline-block;
 }
 .home_top ul{
-    width:100%;
-    position:absolute;
-    top:310px;
+    margin-top:15px;
 }
 .home_top li{
     padding:5px;
@@ -44,6 +41,5 @@
 }
 .home_top hr{
     width:600px;
-    margin:20px auto;
-
+    margin:20px auto 15px;
 }

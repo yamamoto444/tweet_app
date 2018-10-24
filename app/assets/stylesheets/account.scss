@@ -2,13 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.account_show{
+.account_show,
+.like_show{
     width:300px;
     margin:30px auto;
     padding:30px;
     background-color:#f5f5f5;
+    box-sizing: border-box;
 }
-.account_show img{
+.account_show img,
+.like_show img,{
     display:block;
     margin:0 auto;
     border-radius: 15px;
@@ -22,7 +25,9 @@
    margin-top:20px;
     overflow:hidden;
 }
-.edit_btn,.register_btn,.login_btn{
+.edit_btn,
+.register_btn,
+.login_btn{
     margin-right:5px;
     padding:5px 10px;
     float:left;
@@ -31,7 +36,10 @@
     color:#f5f5f5;
     background-color:#ff6347;
 }
-.login_btn:hover,.edit_btn:hover,.back_btn:hover,.delete_btn:hover{
+.login_btn:hover,
+.edit_btn:hover,
+.back_btn:hover,
+.delete_btn:hover{
     opacity:0.6;
 }
 .back_btn{
@@ -56,12 +64,14 @@
     padding:30px;
     background-color:#f5f5f5;
 }
-.account_new,.login_form{
+.account_new,
+.login_form{
     width:250px;
     font-size:12px;
     margin:0 auto;
 }
-.account_new .inner,.login_form .inner{
+.account_new .inner,
+.login_form .inner{
     padding:50px;
 }
 .account_delete{
@@ -72,20 +82,20 @@
     letter-spacing:1px;
     background-color:#f5f5f5;
 }
-.account_show .switch{
+.switch{
     margin-top:30px;
     overflow:hidden;
 }
-.account_show .switch p{
+.switch p{
     font-weight:bold;
     color:#454545;
     float:left;
     padding:10px 20px 20px 0;
 }
-.account_show .switch a{
+.switch a{
     color:lightgray;
 }
-.account_show .switch a:hover{
+.switch a:hover{
     color:#ff8d64;
 }
 

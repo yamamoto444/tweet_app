@@ -9,16 +9,28 @@
     border:none;
     color:#f5f5f5;
     background-color:#ff6347;
-    padding:5px 10px;
-    margin:7px 0 0 5px;
+    padding:10px;
+    margin-left:5px;
 }
-.posts_index .submit_btn:hover{
+.submit_btn:hover{
     opacity:0.6;
+}
+.retweet_form .submit_btn,
+.posts_edit .submit_btn{
+    border:none;
+    color:#f5f5f5;
+    background-color:#ff6347;
+    padding:10px;
+    margin-top:10px;
+}
+.posts_edit .submit_btn{
+    margin:0 0 0 10px;
 }
 textarea{
     width:300px;
     height:30px;
     float:left;
+    margin-bottom:20px;
 }
 .index_post{
     color:#696969;
@@ -27,24 +39,16 @@ textarea{
     background-color:#f5f5f5;
     padding:30px;
 }
-.posts_index,.posts{
+.posts_index,
+.posts{
     margin-top:30px;
 }
 .posts_line{
     border: 1px solid #e6eae6;
     margin:30px 0;
 }
-.save_btn{
-    font-size:12px;
-    color:#f5f5f5;
-    background-color:#ff6347;
-    margin:5px;
-    padding:5px 10px;
-}
-.save_btn:hover{
-    opacity:0.6;
-}
 .user_info{
+    clear:both;
     overflow:hidden;
     font-size:12px;
     margin-bottom:20px;
@@ -62,32 +66,30 @@ textarea{
 .user_info .name{
     color:gray;
 }
-.posts_show,.posts_edit{
+.posts_show{
     width:400px;
     margin:50px auto;
     padding:30px;
     background-color:#f5f5f5;
 }
 .date_time{
-    margin-top:30px;
+    margin-top:20px;
     text-align: right;
     font-size:12px;
 }
-.like_btns {
-    margin-left:5px;
+.action_btns {
     overflow:hidden;
-    color:gray;
     font-size:12px;
 }
-.like_btns p{
+.action_btns span{
+    margin-left:15px;
+}
+.action_btns p{
     float:left;
     font-size:10px;
 }
-.like_btns a{
+.action_btns a{
     color:gray;
-}
-.like_btns a:hover{
-    color:black;
 }
 .unlike_btn{
     color:orangered;
@@ -102,6 +104,26 @@ textarea{
     float:left;
     margin:0 5px;
 }
-.like_btn:hover{
-    color:orangered;
+.action_title{
+    overflow:hidden;
+    margin-top:10px;
+    display:block;
+    opacity:0.6;
+}
+.action_title span,
+.action_title p{
+    float:left;
+}
+.action_title span{
+    margin-top:8px;
+}
+.retweet_this,
+.edit_comment{
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+.origin_text{
+    opacity:0.9;
+    font-size:14px;
+    margin:-5px 0 0 5px;
 }
