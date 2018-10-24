@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   post "likes/:post_id/destroy" => "likes#destroy"
   post "likes/:post_id/create" => "likes#create"
   
@@ -17,6 +18,9 @@ Rails.application.routes.draw do
 
   post "account/:id" => "account#create"
   get "account/:id" => "account#new"
+
+  post "posts/retweet_create" => "posts#retweet_create"
+  get "posts/:id/retweet_form" => "posts#retweet_form"
 
   get "posts/index" => "posts#index"
   get "posts/:id" => "posts#show"
