@@ -115,6 +115,27 @@ footer p{
 
 /*　画面サイズ 420px */
 @media screen and (max-width:420px) {
+<<<<<<< HEAD
+=======
+input[type="submit"]{
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
     .home_top{
         width:100%;
         height:550px;
@@ -124,7 +145,11 @@ footer p{
         height:550px;
     }
     .home_top .outline{
+<<<<<<< HEAD
         margin-top:40%;
+=======
+        margin-top:35%;
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
         height:0px;
         display:inline-block;
     }
@@ -192,18 +217,36 @@ footer p{
         margin:10px 0;
     }
     .edit_btn,.delete_btn{
+<<<<<<< HEAD
         margin:10px 10px 5px 0;
         width:110px;
+=======
+        margin:10px 20px 5px 0;
+        width:130px;
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
         font-size:14px;
         padding:10px 0;
         text-align:center;
     }
+<<<<<<< HEAD
+=======
+    .delete_btn{
+        margin-right:0;
+    }
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
     .account_edit .input_image{
         width:130px;
         margin-top:10px;
         height:30px;
         background-color:#ccccbb;
     }
+<<<<<<< HEAD
+=======
+    .account_show,.like_show{
+        width:90%;
+        padding:20px;
+    }
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
     .action_btns {
         font-size:16px;
     }
@@ -215,6 +258,7 @@ footer p{
     }
     .posts_show{
         width:100%;
+<<<<<<< HEAD
         box-sizing: border-box;
     }
     .retweet_form,.posts_edit{
@@ -230,6 +274,11 @@ footer p{
     .retweet_form textarea{
         width:98%;
         margin-left:0;
+=======
+    }
+    .retweet_form,.posts_edit{
+        margin-left:10px;
+>>>>>>> e80424284d32ac54499f910cd9ea550273542554
     }
     footer{
         width:100%;

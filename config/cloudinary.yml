@@ -11,6 +11,7 @@ production:
   api_secret: 6piZGZARIdVJAfNxCbYzaIq3xSE
   enhance_image_tag: true
   static_image_support: true
+  secure: true
 test:
   cloud_name: hbkxssffq
   api_key: '193563743245418'
