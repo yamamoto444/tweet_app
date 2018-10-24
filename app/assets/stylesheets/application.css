@@ -25,13 +25,13 @@ img{
 }
 body{
     background-color:#efefef;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 main{
     color:#696969;
     display:block;
     width:840px;
     margin:0 auto;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 header{
     width:100%;
@@ -55,13 +55,16 @@ header h1{
     margin-top:-12px;
     float:left;
 }
+header ul{
+    margin-left:450px;
+}
 header li{
     float:left;
     margin:30px 0 0 50px;
 }
 header .id{
     float:right;
-    margin-top:15px;
+    margin-top:5px;
     font-size:12px;
 }
 header .id img{
@@ -104,9 +107,132 @@ footer{
     margin:0 auto;
 }
 footer p{
-    margin-top:5px;
+    margin:5px 5px 0 0;
     font-size:10px;
     color:gray;
-    float:right;
+    text-align: right;
+}
+
+/*　画面サイズ 420px */
+@media screen and (max-width:420px) {
+    .home_top{
+        width:100%;
+        height:550px;
+    }
+    .home_top .wrap{
+        width:100%;
+        height:550px;
+    }
+    .home_top .outline{
+        margin-top:40%;
+        height:0px;
+        display:inline-block;
+    }
+    .home_top ul{
+        width:100%;
+    }
+    .home_top hr{
+        width:90%;
+        margin-top:35px;
+    }
+    .account_new,.login_form{
+        font-size:20px;
+    }
+    .register_btn,.login_btn{
+        width:130px;
+        padding:10px 0;
+        font-size:16px;
+    }
+    .back_btn{
+        text-align:center;
+        width:130px;
+        padding:10px 0;
+        font-size:16px;
+        margin-bottom:5px;
+    }
+    .posts_index{
+        width:100%;
+    }
+    .posts_index .submit_btn{
+        padding:8px 0;
+        width:50px;
+        margin:0 0 0 10px;
+        font-size:14px;
+    }
+    textarea{
+        margin-left:5px;
+    }
+    header .inner{
+        width:100%;
+    }
+    header h1{
+        margin:-12px 0 0 5px;
+    }
+    header .id{
+        float:left;
+    }
+    header .id img{
+        margin-right:-5px;
+    }
+    header .user_name{
+        display:none;
+    }
+    header ul{
+        margin:0;
+    }
+    header li{
+        margin:35px 0 0 30px;
+    }
+    main{
+        width:100%;
+        height:auto;
+    }
+    .profile_column{
+        font-size:18px;
+        margin:10px 0;
+    }
+    .edit_btn,.delete_btn{
+        margin:10px 10px 5px 0;
+        width:110px;
+        font-size:14px;
+        padding:10px 0;
+        text-align:center;
+    }
+    .account_edit .input_image{
+        width:130px;
+        margin-top:10px;
+        height:30px;
+        background-color:#ccccbb;
+    }
+    .action_btns {
+        font-size:16px;
+    }
+    .posts_index{
+        width:100%;
+    }
+    .posts_index textarea{
+        width:75%;
+    }
+    .posts_show{
+        width:100%;
+        box-sizing: border-box;
+    }
+    .retweet_form,.posts_edit{
+        margin:0 20px;
+    }
+    .posts_edit textarea{
+        margin-left:0;
+        width:98%;
+    }
+    .posts_edit .submit_btn{
+        margin-left:0;
+    }
+    .retweet_form textarea{
+        width:98%;
+        margin-left:0;
+    }
+    footer{
+        width:100%;
+    }
 
 }
